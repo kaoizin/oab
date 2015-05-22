@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectOabModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="projectOabModelStoreContainer">
+    <EntitySet Name="Alternativa" EntityType="projectOabModel.Store.Alternativa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Aluno" EntityType="projectOabModel.Store.Aluno" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlunoTurma" EntityType="projectOabModel.Store.AlunoTurma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AplicacaoAvaliacao" EntityType="projectOabModel.Store.AplicacaoAvaliacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AplicacaoAvaliacaoTurma" EntityType="projectOabModel.Store.AplicacaoAvaliacaoTurma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Avaliacao" EntityType="projectOabModel.Store.Avaliacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AvaliacaoQuestao" EntityType="projectOabModel.Store.AvaliacaoQuestao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Disciplina" EntityType="projectOabModel.Store.Disciplina" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcao" EntityType="projectOabModel.Store.Funcao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Papel" EntityType="projectOabModel.Store.Papel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PapelFuncao" EntityType="projectOabModel.Store.PapelFuncao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParticipacaoAplicacaoAvaliacao" EntityType="projectOabModel.Store.ParticipacaoAplicacaoAvaliacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoa" EntityType="projectOabModel.Store.Pessoa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Professor" EntityType="projectOabModel.Store.Professor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Questao" EntityType="projectOabModel.Store.Questao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QuestaoAlternativa" EntityType="projectOabModel.Store.QuestaoAlternativa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QuestaoResposta" EntityType="projectOabModel.Store.QuestaoResposta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Redator" EntityType="projectOabModel.Store.Redator" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoQuestao" EntityType="projectOabModel.Store.TipoQuestao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Turma" EntityType="projectOabModel.Store.Turma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="projectOabModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPapel" EntityType="projectOabModel.Store.UsuarioPapel" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FKAluno187415" Association="projectOabModel.Store.FKAluno187415">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Aluno" EntitySet="Aluno" />
+    </AssociationSet>
+    <AssociationSet Name="FKAlunoTurma421474" Association="projectOabModel.Store.FKAlunoTurma421474">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="AlunoTurma" EntitySet="AlunoTurma" />
+    </AssociationSet>
+    <AssociationSet Name="FKAlunoTurma754325" Association="projectOabModel.Store.FKAlunoTurma754325">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="AlunoTurma" EntitySet="AlunoTurma" />
+    </AssociationSet>
+    <AssociationSet Name="FKAplicacaoA585439" Association="projectOabModel.Store.FKAplicacaoA585439">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="AplicacaoAvaliacaoTurma" EntitySet="AplicacaoAvaliacaoTurma" />
+    </AssociationSet>
+    <AssociationSet Name="FKAplicacaoA67341" Association="projectOabModel.Store.FKAplicacaoA67341">
+      <End Role="Avaliacao" EntitySet="Avaliacao" />
+      <End Role="AplicacaoAvaliacao" EntitySet="AplicacaoAvaliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FKAplicacaoA785663" Association="projectOabModel.Store.FKAplicacaoA785663">
+      <End Role="AplicacaoAvaliacao" EntitySet="AplicacaoAvaliacao" />
+      <End Role="AplicacaoAvaliacaoTurma" EntitySet="AplicacaoAvaliacaoTurma" />
+    </AssociationSet>
+    <AssociationSet Name="FKAvaliacao199963" Association="projectOabModel.Store.FKAvaliacao199963">
+      <End Role="Professor" EntitySet="Professor" />
+      <End Role="Avaliacao" EntitySet="Avaliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FKAvaliacao547159" Association="projectOabModel.Store.FKAvaliacao547159">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="Avaliacao" EntitySet="Avaliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FKAvaliacaoQ223995" Association="projectOabModel.Store.FKAvaliacaoQ223995">
+      <End Role="Questao" EntitySet="Questao" />
+      <End Role="AvaliacaoQuestao" EntitySet="AvaliacaoQuestao" />
+    </AssociationSet>
+    <AssociationSet Name="FKAvaliacaoQ872081" Association="projectOabModel.Store.FKAvaliacaoQ872081">
+      <End Role="Avaliacao" EntitySet="Avaliacao" />
+      <End Role="AvaliacaoQuestao" EntitySet="AvaliacaoQuestao" />
+    </AssociationSet>
+    <AssociationSet Name="FKPapelFunca12726" Association="projectOabModel.Store.FKPapelFunca12726">
+      <End Role="Funcao" EntitySet="Funcao" />
+      <End Role="PapelFuncao" EntitySet="PapelFuncao" />
+    </AssociationSet>
+    <AssociationSet Name="FKPapelFunca233435" Association="projectOabModel.Store.FKPapelFunca233435">
+      <End Role="Papel" EntitySet="Papel" />
+      <End Role="PapelFuncao" EntitySet="PapelFuncao" />
+    </AssociationSet>
+    <AssociationSet Name="FKParticipac457508" Association="projectOabModel.Store.FKParticipac457508">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="ParticipacaoAplicacaoAvaliacao" EntitySet="ParticipacaoAplicacaoAvaliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FKParticipac990583" Association="projectOabModel.Store.FKParticipac990583">
+      <End Role="AplicacaoAvaliacao" EntitySet="AplicacaoAvaliacao" />
+      <End Role="ParticipacaoAplicacaoAvaliacao" EntitySet="ParticipacaoAplicacaoAvaliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FKPessoa976944" Association="projectOabModel.Store.FKPessoa976944">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <AssociationSet Name="FKProfessor922238" Association="projectOabModel.Store.FKProfessor922238">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Professor" EntitySet="Professor" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestao114927" Association="projectOabModel.Store.FKQuestao114927">
+      <End Role="Redator" EntitySet="Redator" />
+      <End Role="Questao" EntitySet="Questao" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestao330883" Association="projectOabModel.Store.FKQuestao330883">
+      <End Role="Disciplina" EntitySet="Disciplina" />
+      <End Role="Questao" EntitySet="Questao" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestao421180" Association="projectOabModel.Store.FKQuestao421180">
+      <End Role="TipoQuestao" EntitySet="TipoQuestao" />
+      <End Role="Questao" EntitySet="Questao" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestaoAlt171449" Association="projectOabModel.Store.FKQuestaoAlt171449">
+      <End Role="Questao" EntitySet="Questao" />
+      <End Role="QuestaoAlternativa" EntitySet="QuestaoAlternativa" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestaoAlt283304" Association="projectOabModel.Store.FKQuestaoAlt283304">
+      <End Role="Alternativa" EntitySet="Alternativa" />
+      <End Role="QuestaoAlternativa" EntitySet="QuestaoAlternativa" />
+    </AssociationSet>
+    <AssociationSet Name="FKQuestaoRes693548" Association="projectOabModel.Store.FKQuestaoRes693548">
+      <End Role="ParticipacaoAplicacaoAvaliacao" EntitySet="ParticipacaoAplicacaoAvaliacao" />
+      <End Role="QuestaoResposta" EntitySet="QuestaoResposta" />
+    </AssociationSet>
+    <AssociationSet Name="FKRedator384823" Association="projectOabModel.Store.FKRedator384823">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Redator" EntitySet="Redator" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuarioPap248628" Association="projectOabModel.Store.FKUsuarioPap248628">
+      <End Role="Papel" EntitySet="Papel" />
+      <End Role="UsuarioPapel" EntitySet="UsuarioPapel" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuarioPap480870" Association="projectOabModel.Store.FKUsuarioPap480870">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioPapel" EntitySet="UsuarioPapel" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Alternativa">
+    <Key>
+      <PropertyRef Name="IdAlternativa" />
+    </Key>
+    <Property Name="IdAlternativa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoAlternativa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aluno">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+    <Property Name="Matricula" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AlunoTurma">
+    <Key>
+      <PropertyRef Name="IdAlunoTurma" />
+    </Key>
+    <Property Name="IdAlunoTurma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAluno" Type="int" Nullable="false" />
+    <Property Name="IdTurma" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AplicacaoAvaliacao">
+    <Key>
+      <PropertyRef Name="IdAplicacaoAvaliacao" />
+    </Key>
+    <Property Name="IdAplicacaoAvaliacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAvaliacao" Type="int" />
+    <Property Name="DataAplicacao" Type="int" Nullable="false" />
+    <Property Name="QuantidadeQuestoes" Type="int" Nullable="false" />
+    <Property Name="TempoPorQuestao" Type="time" />
+    <Property Name="TempoTotal" Type="time" />
+  </EntityType>
+  <EntityType Name="AplicacaoAvaliacaoTurma">
+    <Key>
+      <PropertyRef Name="IdAplicacaoAvaliacaoTurma" />
+    </Key>
+    <Property Name="IdAplicacaoAvaliacaoTurma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAplicacaoAvaliacao" Type="int" Nullable="false" />
+    <Property Name="IdTurma" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Avaliacao">
+    <Key>
+      <PropertyRef Name="IdAvaliacao" />
+    </Key>
+    <Property Name="IdAvaliacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAluno" Type="int" />
+    <Property Name="IdProfessor" Type="int" />
+    <Property Name="NomeAvaliacao" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="DataInicio" Type="datetime" Nullable="false" />
+    <Property Name="DataFim" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AvaliacaoQuestao">
+    <Key>
+      <PropertyRef Name="AvaliacaoIdAvaliacao" />
+      <PropertyRef Name="QuestaoIdQuestao" />
+    </Key>
+    <Property Name="AvaliacaoIdAvaliacao" Type="int" Nullable="false" />
+    <Property Name="QuestaoIdQuestao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Disciplina">
+    <Key>
+      <PropertyRef Name="IdDisciplina" />
+    </Key>
+    <Property Name="IdDisciplina" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Funcao">
+    <Key>
+      <PropertyRef Name="IdFuncao" />
+    </Key>
+    <Property Name="IdFuncao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoFuncao" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="URL" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Papel">
+    <Key>
+      <PropertyRef Name="IdPapel" />
+    </Key>
+    <Property Name="IdPapel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoPapel" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PapelFuncao">
+    <Key>
+      <PropertyRef Name="IdPapelFuncao" />
+    </Key>
+    <Property Name="IdPapelFuncao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdPapel" Type="int" Nullable="false" />
+    <Property Name="IdFuncao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParticipacaoAplicacaoAvaliacao">
+    <Key>
+      <PropertyRef Name="IdAluno" />
+      <PropertyRef Name="IdAplicacaoAvaliacao" />
+    </Key>
+    <Property Name="IdAluno" Type="int" Nullable="false" />
+    <Property Name="IdAplicacaoAvaliacao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Professor">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questao">
+    <Key>
+      <PropertyRef Name="IdQuestao" />
+    </Key>
+    <Property Name="IdRedator" Type="int" />
+    <Property Name="IdQuestao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TextoQuestao" Type="text" />
+    <Property Name="DisciplinaIdDisciplina" Type="int" />
+    <Property Name="TipoQuestaoIdTipoQuestao" Type="int" />
+  </EntityType>
+  <EntityType Name="QuestaoAlternativa">
+    <Key>
+      <PropertyRef Name="QuestaoIdQuestao" />
+      <PropertyRef Name="AlternativaIdAlternativa" />
+    </Key>
+    <Property Name="QuestaoIdQuestao" Type="int" Nullable="false" />
+    <Property Name="AlternativaIdAlternativa" Type="int" Nullable="false" />
+    <Property Name="Resposta" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuestaoResposta">
+    <Key>
+      <PropertyRef Name="IdQuescaoResposta" />
+    </Key>
+    <Property Name="IdQuescaoResposta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAplicacaoAvaliacao" Type="int" Nullable="false" />
+    <Property Name="IdAluno" Type="int" Nullable="false" />
+    <Property Name="IdQuestao" Type="int" Nullable="false" />
+    <Property Name="IdAlternativa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Redator">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoQuestao">
+    <Key>
+      <PropertyRef Name="IdTipoQuestao" />
+    </Key>
+    <Property Name="IdTipoQuestao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoTipoQuestao" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Turma">
+    <Key>
+      <PropertyRef Name="IdTurma" />
+    </Key>
+    <Property Name="IdTurma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Periodo" Type="int" Nullable="false" />
+    <Property Name="DescricaoTurma" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NomeUsuario" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="UsuarioPapel">
+    <Key>
+      <PropertyRef Name="IdUsuarioPapel" />
+    </Key>
+    <Property Name="IdUsuarioPapel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdPapel" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FKAluno187415">
+    <End Role="Pessoa" Type="projectOabModel.Store.Pessoa" Multiplicity="1" />
+    <End Role="Aluno" Type="projectOabModel.Store.Aluno" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Aluno">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAlunoTurma421474">
+    <End Role="Turma" Type="projectOabModel.Store.Turma" Multiplicity="1" />
+    <End Role="AlunoTurma" Type="projectOabModel.Store.AlunoTurma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="IdTurma" />
+      </Principal>
+      <Dependent Role="AlunoTurma">
+        <PropertyRef Name="IdTurma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAlunoTurma754325">
+    <End Role="Aluno" Type="projectOabModel.Store.Aluno" Multiplicity="1" />
+    <End Role="AlunoTurma" Type="projectOabModel.Store.AlunoTurma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="AlunoTurma">
+        <PropertyRef Name="IdAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAplicacaoA585439">
+    <End Role="Turma" Type="projectOabModel.Store.Turma" Multiplicity="1" />
+    <End Role="AplicacaoAvaliacaoTurma" Type="projectOabModel.Store.AplicacaoAvaliacaoTurma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="IdTurma" />
+      </Principal>
+      <Dependent Role="AplicacaoAvaliacaoTurma">
+        <PropertyRef Name="IdTurma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAplicacaoA67341">
+    <End Role="Avaliacao" Type="projectOabModel.Store.Avaliacao" Multiplicity="0..1" />
+    <End Role="AplicacaoAvaliacao" Type="projectOabModel.Store.AplicacaoAvaliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avaliacao">
+        <PropertyRef Name="IdAvaliacao" />
+      </Principal>
+      <Dependent Role="AplicacaoAvaliacao">
+        <PropertyRef Name="IdAvaliacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAplicacaoA785663">
+    <End Role="AplicacaoAvaliacao" Type="projectOabModel.Store.AplicacaoAvaliacao" Multiplicity="1" />
+    <End Role="AplicacaoAvaliacaoTurma" Type="projectOabModel.Store.AplicacaoAvaliacaoTurma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AplicacaoAvaliacao">
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Principal>
+      <Dependent Role="AplicacaoAvaliacaoTurma">
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAvaliacao199963">
+    <End Role="Professor" Type="projectOabModel.Store.Professor" Multiplicity="0..1" />
+    <End Role="Avaliacao" Type="projectOabModel.Store.Avaliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professor">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Avaliacao">
+        <PropertyRef Name="IdProfessor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAvaliacao547159">
+    <End Role="Aluno" Type="projectOabModel.Store.Aluno" Multiplicity="0..1" />
+    <End Role="Avaliacao" Type="projectOabModel.Store.Avaliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Avaliacao">
+        <PropertyRef Name="IdAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAvaliacaoQ223995">
+    <End Role="Questao" Type="projectOabModel.Store.Questao" Multiplicity="1" />
+    <End Role="AvaliacaoQuestao" Type="projectOabModel.Store.AvaliacaoQuestao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questao">
+        <PropertyRef Name="IdQuestao" />
+      </Principal>
+      <Dependent Role="AvaliacaoQuestao">
+        <PropertyRef Name="QuestaoIdQuestao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAvaliacaoQ872081">
+    <End Role="Avaliacao" Type="projectOabModel.Store.Avaliacao" Multiplicity="1" />
+    <End Role="AvaliacaoQuestao" Type="projectOabModel.Store.AvaliacaoQuestao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avaliacao">
+        <PropertyRef Name="IdAvaliacao" />
+      </Principal>
+      <Dependent Role="AvaliacaoQuestao">
+        <PropertyRef Name="AvaliacaoIdAvaliacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPapelFunca12726">
+    <End Role="Funcao" Type="projectOabModel.Store.Funcao" Multiplicity="1" />
+    <End Role="PapelFuncao" Type="projectOabModel.Store.PapelFuncao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcao">
+        <PropertyRef Name="IdFuncao" />
+      </Principal>
+      <Dependent Role="PapelFuncao">
+        <PropertyRef Name="IdFuncao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPapelFunca233435">
+    <End Role="Papel" Type="projectOabModel.Store.Papel" Multiplicity="1" />
+    <End Role="PapelFuncao" Type="projectOabModel.Store.PapelFuncao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Papel">
+        <PropertyRef Name="IdPapel" />
+      </Principal>
+      <Dependent Role="PapelFuncao">
+        <PropertyRef Name="IdPapel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKParticipac457508">
+    <End Role="Aluno" Type="projectOabModel.Store.Aluno" Multiplicity="1" />
+    <End Role="ParticipacaoAplicacaoAvaliacao" Type="projectOabModel.Store.ParticipacaoAplicacaoAvaliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="ParticipacaoAplicacaoAvaliacao">
+        <PropertyRef Name="IdAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKParticipac990583">
+    <End Role="AplicacaoAvaliacao" Type="projectOabModel.Store.AplicacaoAvaliacao" Multiplicity="1" />
+    <End Role="ParticipacaoAplicacaoAvaliacao" Type="projectOabModel.Store.ParticipacaoAplicacaoAvaliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AplicacaoAvaliacao">
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Principal>
+      <Dependent Role="ParticipacaoAplicacaoAvaliacao">
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPessoa976944">
+    <End Role="Usuario" Type="projectOabModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Pessoa" Type="projectOabModel.Store.Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKProfessor922238">
+    <End Role="Pessoa" Type="projectOabModel.Store.Pessoa" Multiplicity="1" />
+    <End Role="Professor" Type="projectOabModel.Store.Professor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Professor">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestao114927">
+    <End Role="Redator" Type="projectOabModel.Store.Redator" Multiplicity="0..1" />
+    <End Role="Questao" Type="projectOabModel.Store.Questao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Redator">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Questao">
+        <PropertyRef Name="IdRedator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestao330883">
+    <End Role="Disciplina" Type="projectOabModel.Store.Disciplina" Multiplicity="0..1" />
+    <End Role="Questao" Type="projectOabModel.Store.Questao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disciplina">
+        <PropertyRef Name="IdDisciplina" />
+      </Principal>
+      <Dependent Role="Questao">
+        <PropertyRef Name="DisciplinaIdDisciplina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestao421180">
+    <End Role="TipoQuestao" Type="projectOabModel.Store.TipoQuestao" Multiplicity="0..1" />
+    <End Role="Questao" Type="projectOabModel.Store.Questao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoQuestao">
+        <PropertyRef Name="IdTipoQuestao" />
+      </Principal>
+      <Dependent Role="Questao">
+        <PropertyRef Name="TipoQuestaoIdTipoQuestao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestaoAlt171449">
+    <End Role="Questao" Type="projectOabModel.Store.Questao" Multiplicity="1" />
+    <End Role="QuestaoAlternativa" Type="projectOabModel.Store.QuestaoAlternativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questao">
+        <PropertyRef Name="IdQuestao" />
+      </Principal>
+      <Dependent Role="QuestaoAlternativa">
+        <PropertyRef Name="QuestaoIdQuestao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestaoAlt283304">
+    <End Role="Alternativa" Type="projectOabModel.Store.Alternativa" Multiplicity="1" />
+    <End Role="QuestaoAlternativa" Type="projectOabModel.Store.QuestaoAlternativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alternativa">
+        <PropertyRef Name="IdAlternativa" />
+      </Principal>
+      <Dependent Role="QuestaoAlternativa">
+        <PropertyRef Name="AlternativaIdAlternativa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQuestaoRes693548">
+    <End Role="ParticipacaoAplicacaoAvaliacao" Type="projectOabModel.Store.ParticipacaoAplicacaoAvaliacao" Multiplicity="1" />
+    <End Role="QuestaoResposta" Type="projectOabModel.Store.QuestaoResposta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParticipacaoAplicacaoAvaliacao">
+        <PropertyRef Name="IdAluno" />
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Principal>
+      <Dependent Role="QuestaoResposta">
+        <PropertyRef Name="IdAluno" />
+        <PropertyRef Name="IdAplicacaoAvaliacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKRedator384823">
+    <End Role="Pessoa" Type="projectOabModel.Store.Pessoa" Multiplicity="1" />
+    <End Role="Redator" Type="projectOabModel.Store.Redator" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Redator">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuarioPap248628">
+    <End Role="Papel" Type="projectOabModel.Store.Papel" Multiplicity="1" />
+    <End Role="UsuarioPapel" Type="projectOabModel.Store.UsuarioPapel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Papel">
+        <PropertyRef Name="IdPapel" />
+      </Principal>
+      <Dependent Role="UsuarioPapel">
+        <PropertyRef Name="IdPapel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuarioPap480870">
+    <End Role="Usuario" Type="projectOabModel.Store.Usuario" Multiplicity="1" />
+    <End Role="UsuarioPapel" Type="projectOabModel.Store.UsuarioPapel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPapel">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'projectOab.dbo.DisciplinaTurma' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DisciplinaTurma">
+        <Property Name="TurmaIdTurma" Type="int" />
+        <Property Name="DisciplinaIdDisciplina" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'projectOab.dbo.ProfessorTurma' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="ProfessorTurma">
+        <Property Name="PrefessorPessoaIdUsuario2" Type="int" />
+        <Property Name="TurmaIdTurma" Type="int" />
+      </EntityType>-->
+</Schema>

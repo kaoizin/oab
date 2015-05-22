@@ -1,0 +1,66 @@
+﻿@model oab.Entity.Turma
+@{
+    ViewBag.Title = "Index";
+}
+<h2>AlunoProva</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AlunoTurm a</legend>
+        <div class="editor-label">
+            Turma
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Turma")
+        </div>
+        <div id="divAluno">
+            <div class="editor-label">
+                <b>Aluno</b>
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("IdAluno")
+            </div>
+        </div>
+        <p>
+            <input type="submit" value="Listar" />
+        </p>
+
+}
+            
+    </fieldset>
+   
+}
+<div>
+    @Html.ActionLink("Lista", "ListaAvaliacoes")
+    @Html.ActionLink("Voltar", "Home/Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+    $("#Turma").change(function () {
+
+        $.ajax({
+            type: "POST",
+            dataType: "JSON",
+            url: "AlunoProva/ListaAlunos",
+            data: { id: $("#Turma").val() },
+            success: function (dados) {
+                var html = "";
+                $.each(dados["alunos"], function (index, obj) {
+                    html = html + "<option value='" + obj.Value + "'>"
+                                + obj.Text + "</option>";
+                });
+                $("#IdAluno").html(html);
+                $("#divAluno").show();
+            }
+        });
+
+    });    
+</script>
+
+
+
+

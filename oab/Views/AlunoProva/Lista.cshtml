@@ -1,0 +1,51 @@
+﻿@model IEnumerable<oab.Entity.Avaliacao>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdAluno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProfessor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeAvaliacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdAluno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProfessor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeAvaliacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataFim)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdAvaliacao }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdAvaliacao }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdAvaliacao })
+        </td>
+    </tr>
+}
+
+</table>

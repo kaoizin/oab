@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="projectOabModelStoreContainer" CdmEntityContainer="OabEntities">
+    <EntitySetMapping Name="Alternativa">
+      <EntityTypeMapping TypeName="projectOabModel.Alternativa">
+        <MappingFragment StoreEntitySet="Alternativa">
+          <ScalarProperty Name="IdAlternativa" ColumnName="IdAlternativa" />
+          <ScalarProperty Name="DescricaoAlternativa" ColumnName="DescricaoAlternativa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aluno">
+      <EntityTypeMapping TypeName="projectOabModel.Aluno">
+        <MappingFragment StoreEntitySet="Aluno">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlunoTurma">
+      <EntityTypeMapping TypeName="projectOabModel.AlunoTurma">
+        <MappingFragment StoreEntitySet="AlunoTurma">
+          <ScalarProperty Name="IdAlunoTurma" ColumnName="IdAlunoTurma" />
+          <ScalarProperty Name="IdAluno" ColumnName="IdAluno" />
+          <ScalarProperty Name="IdTurma" ColumnName="IdTurma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AplicacaoAvaliacao">
+      <EntityTypeMapping TypeName="projectOabModel.AplicacaoAvaliacao">
+        <MappingFragment StoreEntitySet="AplicacaoAvaliacao">
+          <ScalarProperty Name="IdAplicacaoAvaliacao" ColumnName="IdAplicacaoAvaliacao" />
+          <ScalarProperty Name="IdAvaliacao" ColumnName="IdAvaliacao" />
+          <ScalarProperty Name="DataAplicacao" ColumnName="DataAplicacao" />
+          <ScalarProperty Name="QuantidadeQuestoes" ColumnName="QuantidadeQuestoes" />
+          <ScalarProperty Name="TempoPorQuestao" ColumnName="TempoPorQuestao" />
+          <ScalarProperty Name="TempoTotal" ColumnName="TempoTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AplicacaoAvaliacaoTurma">
+      <EntityTypeMapping TypeName="projectOabModel.AplicacaoAvaliacaoTurma">
+        <MappingFragment StoreEntitySet="AplicacaoAvaliacaoTurma">
+          <ScalarProperty Name="IdAplicacaoAvaliacaoTurma" ColumnName="IdAplicacaoAvaliacaoTurma" />
+          <ScalarProperty Name="IdAplicacaoAvaliacao" ColumnName="IdAplicacaoAvaliacao" />
+          <ScalarProperty Name="IdTurma" ColumnName="IdTurma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Avaliacao">
+      <EntityTypeMapping TypeName="projectOabModel.Avaliacao">
+        <MappingFragment StoreEntitySet="Avaliacao">
+          <ScalarProperty Name="IdAvaliacao" ColumnName="IdAvaliacao" />
+          <ScalarProperty Name="IdAluno" ColumnName="IdAluno" />
+          <ScalarProperty Name="IdProfessor" ColumnName="IdProfessor" />
+          <ScalarProperty Name="NomeAvaliacao" ColumnName="NomeAvaliacao" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disciplina">
+      <EntityTypeMapping TypeName="projectOabModel.Disciplina">
+        <MappingFragment StoreEntitySet="Disciplina">
+          <ScalarProperty Name="IdDisciplina" ColumnName="IdDisciplina" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcao">
+      <EntityTypeMapping TypeName="projectOabModel.Funcao">
+        <MappingFragment StoreEntitySet="Funcao">
+          <ScalarProperty Name="IdFuncao" ColumnName="IdFuncao" />
+          <ScalarProperty Name="DescricaoFuncao" ColumnName="DescricaoFuncao" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Papel">
+      <EntityTypeMapping TypeName="projectOabModel.Papel">
+        <MappingFragment StoreEntitySet="Papel">
+          <ScalarProperty Name="IdPapel" ColumnName="IdPapel" />
+          <ScalarProperty Name="DescricaoPapel" ColumnName="DescricaoPapel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PapelFuncao">
+      <EntityTypeMapping TypeName="projectOabModel.PapelFuncao">
+        <MappingFragment StoreEntitySet="PapelFuncao">
+          <ScalarProperty Name="IdPapelFuncao" ColumnName="IdPapelFuncao" />
+          <ScalarProperty Name="IdPapel" ColumnName="IdPapel" />
+          <ScalarProperty Name="IdFuncao" ColumnName="IdFuncao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParticipacaoAplicacaoAvaliacao">
+      <EntityTypeMapping TypeName="projectOabModel.ParticipacaoAplicacaoAvaliacao">
+        <MappingFragment StoreEntitySet="ParticipacaoAplicacaoAvaliacao">
+          <ScalarProperty Name="IdAluno" ColumnName="IdAluno" />
+          <ScalarProperty Name="IdAplicacaoAvaliacao" ColumnName="IdAplicacaoAvaliacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="projectOabModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professor">
+      <EntityTypeMapping TypeName="projectOabModel.Professor">
+        <MappingFragment StoreEntitySet="Professor">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questao">
+      <EntityTypeMapping TypeName="projectOabModel.Questao">
+        <MappingFragment StoreEntitySet="Questao">
+          <ScalarProperty Name="IdRedator" ColumnName="IdRedator" />
+          <ScalarProperty Name="IdQuestao" ColumnName="IdQuestao" />
+          <ScalarProperty Name="TextoQuestao" ColumnName="TextoQuestao" />
+          <ScalarProperty Name="DisciplinaIdDisciplina" ColumnName="DisciplinaIdDisciplina" />
+          <ScalarProperty Name="TipoQuestaoIdTipoQuestao" ColumnName="TipoQuestaoIdTipoQuestao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestaoAlternativa">
+      <EntityTypeMapping TypeName="projectOabModel.QuestaoAlternativa">
+        <MappingFragment StoreEntitySet="QuestaoAlternativa">
+          <ScalarProperty Name="QuestaoIdQuestao" ColumnName="QuestaoIdQuestao" />
+          <ScalarProperty Name="AlternativaIdAlternativa" ColumnName="AlternativaIdAlternativa" />
+          <ScalarProperty Name="Resposta" ColumnName="Resposta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestaoResposta">
+      <EntityTypeMapping TypeName="projectOabModel.QuestaoResposta">
+        <MappingFragment StoreEntitySet="QuestaoResposta">
+          <ScalarProperty Name="IdQuescaoResposta" ColumnName="IdQuescaoResposta" />
+          <ScalarProperty Name="IdAplicacaoAvaliacao" ColumnName="IdAplicacaoAvaliacao" />
+          <ScalarProperty Name="IdAluno" ColumnName="IdAluno" />
+          <ScalarProperty Name="IdQuestao" ColumnName="IdQuestao" />
+          <ScalarProperty Name="IdAlternativa" ColumnName="IdAlternativa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Redator">
+      <EntityTypeMapping TypeName="projectOabModel.Redator">
+        <MappingFragment StoreEntitySet="Redator">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoQuestao">
+      <EntityTypeMapping TypeName="projectOabModel.TipoQuestao">
+        <MappingFragment StoreEntitySet="TipoQuestao">
+          <ScalarProperty Name="IdTipoQuestao" ColumnName="IdTipoQuestao" />
+          <ScalarProperty Name="DescricaoTipoQuestao" ColumnName="DescricaoTipoQuestao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turma">
+      <EntityTypeMapping TypeName="projectOabModel.Turma">
+        <MappingFragment StoreEntitySet="Turma">
+          <ScalarProperty Name="IdTurma" ColumnName="IdTurma" />
+          <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+          <ScalarProperty Name="DescricaoTurma" ColumnName="DescricaoTurma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="projectOabModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="NomeUsuario" ColumnName="NomeUsuario" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioPapel">
+      <EntityTypeMapping TypeName="projectOabModel.UsuarioPapel">
+        <MappingFragment StoreEntitySet="UsuarioPapel">
+          <ScalarProperty Name="IdUsuarioPapel" ColumnName="IdUsuarioPapel" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdPapel" ColumnName="IdPapel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AvaliacaoQuestao" TypeName="projectOabModel.AvaliacaoQuestao" StoreEntitySet="AvaliacaoQuestao">
+      <EndProperty Name="Questao">
+        <ScalarProperty Name="IdQuestao" ColumnName="QuestaoIdQuestao" />
+      </EndProperty>
+      <EndProperty Name="Avaliacao">
+        <ScalarProperty Name="IdAvaliacao" ColumnName="AvaliacaoIdAvaliacao" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

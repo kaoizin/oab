@@ -1,0 +1,48 @@
+﻿@model oab.ViewModel.AlunoProvaViewModel
+
+@{
+    ViewBag.Title = "ProvaPorAluno";
+}
+
+<h2>ProvaPorAluno</h2>
+        <div class="editor-label">
+            Turma
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Turma",Model.Turma)
+        </div>
+        <div id="divAluno">
+            <div class="editor-label">
+                <b>Aluno</b>
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("IdAluno", Model.Aluno)
+            </div>
+        </div>
+
+<div id="Lista">
+    @Html.Partial("List",Model.ListaAvaliacoes)
+ </div>
+
+<script>
+    $("#Turma").change(function () {
+
+        $.ajax({
+            type: "POST",
+            dataType: "JSON",
+            url: "ListaAlunos",
+            data: { id: $("#Turma").val() },
+
+            success: function (dados) {
+                var html = "";
+                $.each(dados["alunos"], function (index, obj) {
+                    html = html + "<option value='" + obj.Value + "'>"
+                                + obj.Text + "</option>";
+                });
+                $("#IdAluno").html(html);
+                $("#divAluno").show();
+            }
+        });
+    });    
+</script>
+
